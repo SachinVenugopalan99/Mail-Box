@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import {useNavigate} from "react-router-dom";
 import Main from "../components/Main";
 import SideNav from "../components/SideNav";
@@ -22,7 +22,6 @@ const MainLayout = () => {
 
   const mailList = useSelector((state) => state?.mails);
   const dispatch = useDispatch();
-  const isInitialMount = useRef(true);
 
   const mailUrl = 'https://run.mocky.io/v3/15a3a1c3-1cda-4409-b1b1-2f39f5f25123';
   const getMails = () => {  
@@ -38,10 +37,6 @@ const MainLayout = () => {
   };
 
   useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-      return;
-    }
     getMails();
   }, [])
 
