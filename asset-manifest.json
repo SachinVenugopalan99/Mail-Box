@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Mail-Box/static/css/main.734a70dd.css",
+    "main.js": "/Mail-Box/static/js/main.f8233d8d.js",
+    "index.html": "/Mail-Box/index.html",
+    "main.734a70dd.css.map": "/Mail-Box/static/css/main.734a70dd.css.map",
+    "main.f8233d8d.js.map": "/Mail-Box/static/js/main.f8233d8d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.734a70dd.css",
+    "static/js/main.f8233d8d.js"
+  ]
+}
