@@ -1,34 +1,37 @@
-import { mailList } from '../data/data';
 import {
     INBOX,
     SPAM,
     TRASH,
     DRAFT,
-    ALL_MAIL
+    ALL_MAIL,
+    ALL
 } from './types'
 
-const getMails = (type) => {
+const getMails = (mailList, type) => {
     const res = mailList?.filter((item) => item.tag === type);
     return res;
 }
 
 const initialState = {
-    allMails: [...mailList],
-    mails: [...getMails('inbox')]
+    allMails: [],
+    mails: []
 };
 
 export const reducer = (state=initialState, action) => {
-    switch(action?.type) {
+    const {type, payload} = action;
+    switch(type) {
        case INBOX: 
-       return {...state, mails: [...getMails('inbox')]};
+       return {...state, mails: [...getMails(state.allMails,'inbox')]};
        case SPAM: 
-       return {...state, mails: [...getMails('spam')]};
+       return {...state, mails: [...getMails(state.allMails, 'spam')]};
        case TRASH: 
-       return {...state, mails: [...getMails('trash')]};
+       return {...state, mails: [...getMails(state.allMails, 'trash')]};
        case DRAFT: 
-       return {...state, mails: [...getMails('draft')]};
+       return {...state, mails: [...getMails(state.allMails, 'draft')]};
        case ALL_MAIL: 
-       return {...state, mails: [...mailList]};
+       return {...state, allMails: payload?.data};
+       case ALL: 
+       return {...state, mails:[...state.allMails]};
        default:
         return state;
     }
