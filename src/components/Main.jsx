@@ -10,6 +10,8 @@ const Main = (props) => {
   useEffect(() => {
    if (mailList?.length) {
     setEmailDetails(mailList[0])
+   } else {
+    setEmailDetails([]);
    }
   }, [mailList])
 
