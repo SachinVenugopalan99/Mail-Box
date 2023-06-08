@@ -1,3 +1,4 @@
+import React, { memo } from 'react';
 
 const SideNav = (props) => {
 
@@ -26,4 +27,4 @@ const SideNav = (props) => {
   );
 }
 
-export default SideNav;
+export default memo(SideNav);

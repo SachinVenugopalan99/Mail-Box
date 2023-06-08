@@ -1,6 +1,7 @@
+import React, { memo } from 'react';
 import "./EmailCard.css";
 
-export default function EmailCard(props) {
+const EmailCard = (props) => {
   const {
     email,
     isSelected,
@@ -32,3 +33,5 @@ export default function EmailCard(props) {
     </div>
   );
 }
+
+export default memo(EmailCard);

@@ -1,3 +1,5 @@
+import React, { memo } from 'react';
+
   const EmailDetails = (props) => {
     const {details} = props;
     return (
@@ -24,4 +26,4 @@
     );
   }
 
-  export default EmailDetails;
+  export default memo(EmailDetails);

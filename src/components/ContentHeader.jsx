@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import {
     faMagnifyingGlass,
   } from "@fortawesome/free-solid-svg-icons";
@@ -42,4 +42,4 @@ import {
     );
   }
 
-  export default ContentHeader;
+  export default memo(ContentHeader);

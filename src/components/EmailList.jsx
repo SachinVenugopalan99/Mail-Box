@@ -1,7 +1,9 @@
+import React, { memo } from 'react';
+
 import EmailCard from "./EmailCard";
 import "./EmailList.css";
 
-export default function EmailList(props) {
+const EmailList = (props) => {
   const {mails, emailDetails, setDetails, selectedTab} = props;
   return (
     <div className="flex flex-col bg-dark-500 w-6/12 mr-1 px-0 h-full">
@@ -21,3 +23,5 @@ export default function EmailList(props) {
     </div>
   );
 }
+
+export default memo(EmailList);
