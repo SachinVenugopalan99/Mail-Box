@@ -15,7 +15,7 @@ import { useSelector } from "react-redux";
 
 const MainLayout = () => {
   const [selectedTab, setSelectedTab] = useState('');
-  const params = window.location.pathname.split('/')[1];
+  const params = window.location.pathname.split('/')[2];
   const searchTerm = window.location.search.split('=')[1];
   const navigate = useNavigate();
 

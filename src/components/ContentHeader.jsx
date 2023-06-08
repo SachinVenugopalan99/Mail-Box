@@ -7,7 +7,7 @@ import {
   import { debounce } from '../util';
   
   const ContentHeader = () => {
-    const params = window.location.pathname.split('/')[1];
+    const params = window.location.pathname.split('/')[2];
     const search = window.location.search.split('=')[1];
     const [searchTerm, setSearchTerm] = useState(search);
     const navigate = useNavigate();
